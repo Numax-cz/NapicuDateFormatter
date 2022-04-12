@@ -6,66 +6,46 @@ class NapicuDate {
     constructor() {
         this._date = new Date();
         this._formats = {
-            'yyyy': this.getYear,
-            'MM': this.getMonth,
-            'dd': this.getDay,
-            'ddn': this.getDayName,
-            "dn": this.getShortDayName,
-            'HH': this.getHours24,
-            'hh': this.getHours12,
-            'mm': this.getMinutes,
-            'MMN': this.getMonthName,
-            'MN': this.getShortMonthName,
-            'ss': this.getSeconds,
-            'a': this.getMeridian,
-            'Z': this.getTimezone
+            '%yyyy': this.getYear,
+            '%ddn': this.getDayName,
+            '%MMN': this.getMonthName,
+            "%dn": this.getShortDayName,
+            '%MN': this.getShortMonthName,
+            '%MM': this.getMonth,
+            '%dd': this.getDay,
+            '%HH': this.getHours24,
+            '%hh': this.getHours12,
+            '%mm': this.getMinutes,
+            '%ss': this.getSeconds,
+            '%a': this.getMeridian,
+            '%z': this.getTimezone
         };
     }
     /**
      * Format the date
-     * * yyyy - Year
-     * * MM - Month
-     * * MMN - Month name
-     * * MN - Month name short
-     * * dd - Day
-     * * ddn - Day name
-     * * dn - Day name short
-     * * HH - 24 Hour
-     * * hh - 12 Hour
-     * * mm - Minutes
-     * * ss - Seconds
-     * * a - AM/PM
-     * * Z - Timezone
+     * * %yyyy - Year
+     * * %MM - Month
+     * * %MMN - Month name
+     * * %MN - Month name short
+     * * %dd - Day
+     * * %ddn - Day name
+     * * %dn - Day name short
+     * * %HH - 24 Hour
+     * * %hh - 12 Hour
+     * * %mm - Minutes
+     * * %ss - Seconds
+     * * %a - AM/PM
+     * * %z - Timezone
      * @param format
      */
     format(format) {
         let date = this._date;
-        let output = "";
-        let formatItemC = format.split(":");
-        for (let i = 0; i < formatItemC.length; i++) {
-            let formatItemS = formatItemC[i].split(",");
-            for (let a = 0; a < formatItemS.length; a++) {
-                let formatItemSpaces = formatItemS[a].split(" ");
-                for (let j = 0; j < formatItemSpaces.length; j++) {
-                    let formatItemSpacesItems = formatItemSpaces[j];
-                    if (formatItemSpacesItems)
-                        output += this._formats[formatItemSpacesItems](date);
-                    if (j < formatItemSpaces.length - 1) {
-                        output += " ";
-                    }
-                    if (j < formatItemSpacesItems.length - 1) {
-                        output += " ";
-                    }
-                }
-                if (a < formatItemS.length - 1) {
-                    output += ",";
-                }
-            }
-            if (i < formatItemC.length - 1) {
-                output += ":";
-            }
+        let out = format;
+        for (const key of Object.keys(this._formats)) {
+            let regex = new RegExp(key, "g");
+            out = out.replace(regex, this._formats[key](date));
         }
-        return output;
+        return out;
     }
     /**
      * Get the day
