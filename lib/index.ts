@@ -1,8 +1,9 @@
 import {NapicuDateConfig} from "./config";
+import {INapicuFormat} from "./interface/Date";
 
 export class NapicuDate {
     protected declare _date: Date;
-    protected declare _formats: { [key: string]: any };
+    protected declare _formats: INapicuFormat;
     protected static readonly _shortName: number = 2;
 
     constructor() {
