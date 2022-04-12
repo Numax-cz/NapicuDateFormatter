@@ -1,0 +1,15 @@
+{
+  "name": "napicudateformatter",
+  "version": "1.0.0",
+  "description": "Script for formatting data",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "DateFormatter",
+    "Napicu"
+  ],
+  "author": "Numax",
+  "license": "MIT"
+}
