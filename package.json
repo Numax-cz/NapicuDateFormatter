@@ -11,5 +11,8 @@
     "Napicu"
   ],
   "author": "Numax",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "string.prototype.padstart": "^3.1.3"
+  }
 }

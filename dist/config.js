@@ -1,6 +1,7 @@
-import {INapicuConfigDate} from "./interface/config";
-
-export const NapicuDateConfig: INapicuConfigDate = {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NapicuDateConfig = void 0;
+exports.NapicuDateConfig = {
     days: [
         "Monday",
         "Tuesday",
@@ -10,7 +11,6 @@ export const NapicuDateConfig: INapicuConfigDate = {
         "Saturday",
         "Sunday",
     ],
-
     months: [
         'January',
         'February',
@@ -25,6 +25,4 @@ export const NapicuDateConfig: INapicuConfigDate = {
         'November',
         'December'
     ],
-}
-
-
+};
