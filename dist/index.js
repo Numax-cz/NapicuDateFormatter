@@ -1,7 +1,31 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.NapicuDate = void 0;
-const config_1 = require("./config");
+exports.NapicuDate = exports.NapicuDateConfig = void 0;
+exports.NapicuDateConfig = {
+    days: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+    ],
+    months: [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December'
+    ],
+};
 class NapicuDate {
     constructor() {
         this._date = new Date();
@@ -48,6 +72,13 @@ class NapicuDate {
         return out;
     }
     /**
+     * Sets the config language
+     * @param config
+     */
+    static use(config) {
+        exports.NapicuDateConfig = config;
+    }
+    /**
      * Get the day
      * @param date
      */
@@ -66,27 +97,27 @@ class NapicuDate {
      * @param date
      */
     getMonthName(date) {
-        return config_1.NapicuDateConfig.months[date.getMonth()];
+        return exports.NapicuDateConfig.months[date.getMonth()];
     }
     /**
      * Get the month name short
      */
     getShortMonthName(date) {
-        return config_1.NapicuDateConfig.months[date.getMonth()].slice(0, NapicuDate._shortName);
+        return exports.NapicuDateConfig.months[date.getMonth()].slice(0, NapicuDate._shortName);
     }
     /**
      * Get the day name
      * @param date
      */
     getDayName(date) {
-        return config_1.NapicuDateConfig.days[date.getDay()];
+        return exports.NapicuDateConfig.days[date.getDay()];
     }
     /**
      * Get the day name short
      * @param date
      */
     getShortDayName(date) {
-        return config_1.NapicuDateConfig.days[date.getDay()].slice(0, NapicuDate._shortName);
+        return exports.NapicuDateConfig.days[date.getDay()].slice(0, NapicuDate._shortName);
     }
     /**
      * Get the year
@@ -142,25 +173,25 @@ class NapicuDate {
      * Get the days
      */
     static getLanguageDays() {
-        return config_1.NapicuDateConfig.days;
+        return exports.NapicuDateConfig.days;
     }
     /**
      * Get the months
      */
     static getLanguageMonths() {
-        return config_1.NapicuDateConfig.months;
+        return exports.NapicuDateConfig.months;
     }
     /**
      * Get the short days
      */
     static getLanguageShortsDays() {
-        return config_1.NapicuDateConfig.days.map((day) => day.slice(0, NapicuDate._shortName));
+        return exports.NapicuDateConfig.days.map((day) => day.slice(0, NapicuDate._shortName));
     }
     /**
      * Get the short months
      */
     static getLanguageShortsMonths() {
-        return config_1.NapicuDateConfig.months.map((month) => month.slice(0, NapicuDate._shortName));
+        return exports.NapicuDateConfig.months.map((month) => month.slice(0, NapicuDate._shortName));
     }
     /**
      * Get the current day
@@ -202,13 +233,13 @@ class NapicuDate {
      * Get the current day name
      */
     getCurrentDayName() {
-        return config_1.NapicuDateConfig.days[this._date.getDay()];
+        return exports.NapicuDateConfig.days[this._date.getDay()];
     }
     /**
      * Get the current month name
      */
     getCurrentMonthName() {
-        return config_1.NapicuDateConfig.months[this._date.getMonth()];
+        return exports.NapicuDateConfig.months[this._date.getMonth()];
     }
 }
 exports.NapicuDate = NapicuDate;

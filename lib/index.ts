@@ -1,5 +1,32 @@
-import {NapicuDateConfig} from "./config";
 import {INapicuFormat} from "./interface/Date";
+import {INapicuConfigDate} from "./interface/config";
+
+export var NapicuDateConfig: INapicuConfigDate = {
+    days: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+    ],
+
+    months: [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December'
+    ],
+};
 
 export class NapicuDate {
     protected declare _date: Date;
@@ -52,6 +79,14 @@ export class NapicuDate {
         }
 
         return out;
+    }
+
+    /**
+     * Sets the config language
+     * @param config
+     */
+    public static use(config: INapicuConfigDate): void {
+        NapicuDateConfig = config;
     }
 
     /**
@@ -161,28 +196,28 @@ export class NapicuDate {
     /**
      * Get the days
      */
-    public static getLanguageDays(): any {
+    public static getLanguageDays(): string[] {
         return NapicuDateConfig.days;
     }
 
     /**
      * Get the months
      */
-    public static getLanguageMonths(): any {
+    public static getLanguageMonths(): string[] {
         return NapicuDateConfig.months;
     }
 
     /**
      * Get the short days
      */
-    public static getLanguageShortsDays(): any {
+    public static getLanguageShortsDays(): string[] {
         return NapicuDateConfig.days.map((day: string) => day.slice(0, NapicuDate._shortName));
     }
 
     /**
      * Get the short months
      */
-    public static getLanguageShortsMonths(): any {
+    public static getLanguageShortsMonths(): string[] {
         return NapicuDateConfig.months.map((month: string) => month.slice(0, NapicuDate._shortName));
     }
 

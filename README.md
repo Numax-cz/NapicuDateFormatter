@@ -108,16 +108,51 @@ let i = new NapicuDate().format("Day: %ddn");
 console.log(i) // Day: 16:59:30
 ```
 
-[//]: # (### Getting)
+### Getting
 
-[//]: # (```typescript)
+```typescript
+let i = new NapicuDate();
 
-[//]: # (let i = new NapicuDate&#40;&#41;;)
+i.getLanguageDays(); // Returns the days of the week in the config language
+i.getLanguageShortsDays(); // Returns shortened days of the week in the config language
+i.getLanguageMonths(); // Returns  he months of the year in the config language
+i.getLanguageShortsMonths(); // Returns shortened months of the year in the config language
+i.getCurrentDay(); // Returns the current day
+i.getCurrentMonth(); // Returns the current month
+i.getCurrentYear(); // Returns the current year
+i.getCurrentSeconds(); // Returns the current seconds
+i.getCurrentMinutes(); // Returns the current minutes
+i.getCurrentHours(); // Returns the current hours
+i.getCurrentDayName(); // Returns the current day name in the config language
+i.getCurrentMonthName(); // Returns the current month name in the config language
+```
+### Configuration
 
-[//]: # (i.getCurrentDayName&#40;&#41;;)
+```typescript
+NapicuDate.use({
+    days: [
+        "Monday",    // 1
+        "Tuesday",   // 2
+        "Wednesday", // 3
+        "Thursday",  // 4
+        "Friday",    // 5
+        "Saturday",  // 6
+        "Sunday",    // 7
+    ],
 
-[//]: # (i.getCurrentDayNameShort&#40;&#41;;)
-
-[//]: # (i.)
-
-[//]: # (```)
+    months: [
+        'January',   // 1
+        'February',  // 2
+        'March',     // 3
+        'April',     // 4
+        'May',       // 5
+        'June',      // 6
+        'July',      // 7
+        'August',    // 8
+        'September', // 9
+        'October',   // 10
+        'November',  // 11
+        'December'   // 12
+    ],
+});
+```
