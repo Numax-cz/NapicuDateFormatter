@@ -105,7 +105,7 @@ console.log(i) // Date: April
 
 ```typescript
 let i = new NapicuDate().format("Day: %ddn");
-console.log(i) // Day: 16:59:30
+console.log(i) // Day: Thursday
 ```
 
 ### Getting
