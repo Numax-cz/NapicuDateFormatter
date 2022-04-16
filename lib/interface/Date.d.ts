@@ -1,4 +1,3 @@
 export declare interface INapicuFormat {
-    [key: string]: any
+  [key: string]: any;
 }
-
