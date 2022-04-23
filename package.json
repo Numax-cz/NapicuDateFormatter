@@ -7,14 +7,24 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "build": "tsc"
+    "build": ".\\build.sh"
   },
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "keywords": [
+    "Napicu",
     "DateFormatter",
-    "Napicu"
+    "Date",
+    "Formatter",
+    "typescript",
+    "ts"
   ],
   "dependencies": {
     "string.prototype.padstart": "^3.1.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Numax-cz/NapicuDateFormatter"
   }
 }
