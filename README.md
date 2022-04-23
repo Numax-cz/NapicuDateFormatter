@@ -1,8 +1,9 @@
 # NapicuDateFormatter
 
-- NapicuDateFormatter is a simple date & time formatter for easy processing of date and time 
+- NapicuDateFormatter is a simple date & time formatter for easy processing of date and time
 
 # Variables for formating
+
 <table>
    <thead>
       <tr>
@@ -85,32 +86,53 @@
    </tbody>
 </table>
 
-
 # Example
+
+### Importing
+
+```typescript
+import { NapicuDate } from 'napicuformatter';
+```
+
+```javascript
+const NapicuDate = require('napicuformatter');
+```
+
 ### Formatting
+
 ```typescript
-let i = new NapicuDate().format("%yyyy%-%MM-%dd %HH:%mm:%ss");
-console.log(i) // 2022-4-12 16:59:30
+import { NapicuDate } from 'napicuformatter';
+
+let i = new NapicuDate().format('%yyyy%-%MM-%dd %HH:%mm:%ss');
+console.log(i); // 2022-4-12 16:59:30
 ```
 
 ```typescript
-let i = new NapicuDate().format("Time: %HH:%mm:%ss");
-console.log(i) // Time: 16:59:30
+import { NapicuDate } from 'napicuformatter';
+
+let i = new NapicuDate().format('Time: %HH:%mm:%ss');
+console.log(i); // Time: 16:59:30
 ```
 
 ```typescript
-let i = new NapicuDate().format("Date: %MMN");
-console.log(i) // Date: April
+import { NapicuDate } from 'napicuformatter';
+
+let i = new NapicuDate().format('Date: %MMN');
+console.log(i); // Date: April
 ```
 
 ```typescript
-let i = new NapicuDate().format("Day: %ddn");
-console.log(i) // Day: Thursday
+import { NapicuDate } from 'napicuformatter';
+
+let i = new NapicuDate().format('Day: %ddn');
+console.log(i); // Day: Thursday
 ```
 
 ### Getting
 
 ```typescript
+import { NapicuDate } from 'napicuformatter';
+
 let i = new NapicuDate();
 
 i.getLanguageDays(); // Returns the days of the week in the config language
@@ -126,42 +148,67 @@ i.getCurrentHours(); // Returns the current hours
 i.getCurrentDayName(); // Returns the current day name in the config language
 i.getCurrentMonthName(); // Returns the current month name in the config language
 ```
+
 ### Static methods
 
 ```typescript
+import { NapicuDate } from 'napicuformatter';
+
 NapicuDate.getLanguageDays(); // Returns the days of the week in the config language
-NapicuDate.getLanguageMonths() // Returns  he months of the year in the config language
+NapicuDate.getLanguageMonths(); // Returns  he months of the year in the config language
 NapicuDate.getLanguageShortsDays(); // Returns shortened days of the week in the config language
 NapicuDate.getLanguageShortsMonths(); // Returns shortened months of the year in the config language
+```
+
+### Use with config
+
+```typescript
+import { NapicuDate } from 'napicuformatter';
+
+NapicuDate.use({
+  shortNameLength: 2,
+});
+
+let i = NapicuDate.getLanguageShortsDays();
+console.log(i);
+//[
+//  'Mo', 'Tu',
+//  'We', 'Th',
+//  'Fr', 'Sa',
+//  'Su'
+//]
 ```
 
 ### Configuration
 
 ```typescript
-NapicuDate.use({
-    days: [
-        "Monday",    // 1
-        "Tuesday",   // 2
-        "Wednesday", // 3
-        "Thursday",  // 4
-        "Friday",    // 5
-        "Saturday",  // 6
-        "Sunday",    // 7
-    ],
+import { NapicuDate } from 'napicuformatter';
 
-    months: [
-        'January',   // 1
-        'February',  // 2
-        'March',     // 3
-        'April',     // 4
-        'May',       // 5
-        'June',      // 6
-        'July',      // 7
-        'August',    // 8
-        'September', // 9
-        'October',   // 10
-        'November',  // 11
-        'December'   // 12
-    ],
+NapicuDate.use({
+  days: [
+    'Monday', // 1
+    'Tuesday', // 2
+    'Wednesday', // 3
+    'Thursday', // 4
+    'Friday', // 5
+    'Saturday', // 6
+    'Sunday', // 7
+  ],
+
+  months: [
+    'January', // 1
+    'February', // 2
+    'March', // 3
+    'April', // 4
+    'May', // 5
+    'June', // 6
+    'July', // 7
+    'August', // 8
+    'September', // 9
+    'October', // 10
+    'November', // 11
+    'December', // 12
+  ],
+  shortNameLength: 3, // Short name length - default 3
 });
 ```

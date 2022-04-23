@@ -1,24 +1,13 @@
 import { INapicuFormat } from './interface/Date';
 import { INapicuConfigDate } from './interface/config';
+import { NapicuDefaultConfig } from './config';
 
-export var NapicuDateConfig: INapicuConfigDate = {
-  days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
 
-  months: [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December',
-  ],
-  shortNameLength: 3,
+
+var NapicuDateConfig = {
+  days: NapicuDefaultConfig.days,
+  months: NapicuDefaultConfig.months,
+  shortNameLength: NapicuDefaultConfig.shortNameLength,
 };
 
 export class NapicuDate {
@@ -78,7 +67,9 @@ export class NapicuDate {
    * @param config
    */
   public static use(config: INapicuConfigDate): void {
-    NapicuDateConfig = config;
+    NapicuDateConfig.days = config.days || NapicuDefaultConfig.days;
+    NapicuDateConfig.months = config.months || NapicuDefaultConfig.months;
+    NapicuDateConfig.shortNameLength = config.shortNameLength || NapicuDefaultConfig.shortNameLength;
   }
 
   /**

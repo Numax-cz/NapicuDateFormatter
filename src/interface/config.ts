@@ -1,5 +1,5 @@
 export declare interface INapicuConfigDate {
-  days: string[];
-  months: string[];
-  shortNameLength: number;
+  days?: string[];
+  months?: string[];
+  shortNameLength?: number;
 }
