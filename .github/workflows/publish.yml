@@ -20,6 +20,7 @@ jobs:
         with: 
           node-version: 16
           registry-url: https://registry.npmjs.org/
+          name: numax
       - name: publish
         run: npm publish
         env: 
