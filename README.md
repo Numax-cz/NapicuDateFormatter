@@ -86,7 +86,7 @@
 </table>
 
 
-#Example
+# Example
 ### Formatting
 ```typescript
 let i = new NapicuDate().format("%yyyy%-%MM-%dd %HH:%mm:%ss");
