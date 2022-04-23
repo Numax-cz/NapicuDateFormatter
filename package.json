@@ -1,17 +1,19 @@
 {
-  "name": "napicudateformatter",
-  "version": "1.0.0",
+  "name": "napicudate",
+  "version": "1.2.0",
+  "author": "Numax",
+  "license": "MIT",
   "description": "Script for formatting data",
-  "main": "src/index.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc"
   },
+  "files": ["lib"],
   "keywords": [
     "DateFormatter",
     "Napicu"
   ],
-  "author": "Numax",
-  "license": "MIT",
   "dependencies": {
     "string.prototype.padstart": "^3.1.3"
   }
