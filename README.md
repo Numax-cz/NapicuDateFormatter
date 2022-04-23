@@ -129,18 +129,12 @@ i.getCurrentMonthName(); // Returns the current month name in the config languag
 ### Static methods
 
 ```typescript
-NapicuDate.getLanguageDays(); // Returns the days of the week in the config languageicuDate
+import {NapicuDate} from "./index";
+
+NapicuDate.getLanguageDays(); // Returns the days of the week in the config language
+NapicuDate.getLanguageMonths() // Returns  he months of the year in the config language
 NapicuDate.getLanguageShortsDays(); // Returns shortened days of the week in the config language
-NapicuDate.getLanguageMonths(); // Returns  he months of the year in the config language
 NapicuDate.getLanguageShortsMonths(); // Returns shortened months of the year in the config language
-NapicuDate.getCurrentDay(); // Returns the current day
-NapicuDate.getCurrentMonth(); // Returns the current month
-NapicuDate.getCurrentYear(); // Returns the current year
-NapicuDate.getCurrentSeconds(); // Returns the current seconds
-NapicuDate.getCurrentMinutes(); // Returns the current minutes
-NapicuDate.getCurrentHours(); // Returns the current hours
-NapicuDate.getCurrentDayName(); // Returns the current day name in the config language
-NapicuDate.getCurrentMonthName(); // Returns the current month name in the config language
 ```
 
 ### Configuration
