@@ -103,7 +103,7 @@ const NapicuDate = require('napicuformatter');
 ```typescript
 import { NapicuDate } from 'napicuformatter';
 
-let i = new NapicuDate().format('%yyyy%-%MM-%dd %HH:%mm:%ss');
+let i = new NapicuDate().format('%yyyy-%MM-%dd %HH:%mm:%ss');
 console.log(i); // 2022-4-12 16:59:30
 ```
 
