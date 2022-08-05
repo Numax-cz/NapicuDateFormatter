@@ -25,7 +25,7 @@ export class NapicuDate {
    let date: Date = new Date();
 
    if(yearOrTimestamp) {
-       if(month) date = new Date(yearOrTimestamp, month, day, hours, minutes, seconds, ms);
+       if(month) date = new Date(yearOrTimestamp, month || 0, day || 0, hours || 0, minutes|| 0, seconds || 0, ms || 0);
        else date = new Date(yearOrTimestamp);
    }
 
