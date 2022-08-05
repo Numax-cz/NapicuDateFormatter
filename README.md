@@ -98,6 +98,13 @@ import { NapicuDate } from 'napicuformatter';
 const NapicuDate = require('napicuformatter');
 ```
 
+### Parameters
+```typescript
+import { NapicuDate } from 'napicuformatter';
+
+
+```
+
 ### Formatting
 
 ```typescript

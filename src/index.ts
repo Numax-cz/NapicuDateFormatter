@@ -14,8 +14,22 @@ export class NapicuDate {
   protected declare _date: Date;
   protected declare _formats: INapicuFormat;
 
-  constructor() {
-    this._date = new Date();
+
+  constructor();
+  constructor(timestamp: number);
+  constructor(year: number, month: number);
+    constructor(yearOrTimestamp: number , month: number, day?: number, hours?: number, minutes?: number, seconds?: number, ms?: number)
+  constructor(yearOrTimestamp?: number , month?: number, day?: number, hours?: number, minutes?: number, seconds?: number, ms?: number)
+ {
+
+   let date: Date = new Date();
+
+   if(yearOrTimestamp) {
+       if(month) date = new Date(yearOrTimestamp, month, day, hours, minutes, seconds, ms);
+       else date = new Date(yearOrTimestamp);
+   }
+
+   this._date = date;
     this._formats = {
       '%yyyy': this.getYear,
       '%ddn': this.getDayName,
@@ -32,7 +46,6 @@ export class NapicuDate {
       '%z': this.getTimezone,
     };
   }
-
   /**
    * Format the date
    * * %yyyy - Year
