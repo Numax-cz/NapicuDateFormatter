@@ -86,7 +86,7 @@ export class NapicuDate {
   }
 
   /**
-   * Get the day
+   * Gets the day
    * @param date
    */
   protected getDay(date: Date): string {
@@ -94,7 +94,7 @@ export class NapicuDate {
   }
 
   /**
-   * Get the month
+   * Gets the month
    * @param date
    */
   protected getMonth(date: Date): string {
@@ -102,7 +102,7 @@ export class NapicuDate {
   }
 
   /**
-   * Get the month name
+   * Gets the month name
    * @param date
    */
   protected getMonthName(date: Date): string {
@@ -110,14 +110,14 @@ export class NapicuDate {
   }
 
   /**
-   * Get the month name short
+   * Gets the month name short
    */
   protected getShortMonthName(date: Date): string {
     return NapicuDateConfig.months[date.getMonth()].slice(0, NapicuDateConfig.shortNameLength);
   }
 
   /**
-   * Get the day name
+   * Gets the day name
    * @param date
    */
   protected getDayName(date: Date): string {
@@ -125,7 +125,7 @@ export class NapicuDate {
   }
 
   /**
-   * Get the day name short
+   * Gets the day name short
    * @param date
    */
   protected getShortDayName(date: Date): string {
@@ -133,7 +133,7 @@ export class NapicuDate {
   }
 
   /**
-   * Get the year
+   * Gets the year
    * @param date
    */
   protected getYear(date: Date): string {
@@ -141,7 +141,7 @@ export class NapicuDate {
   }
 
   /**
-   * Get the hours in 24-hour format
+   * Gets the hours in 24-hour format
    * @param date
    */
   protected getHours24(date: Date): string {
@@ -149,7 +149,7 @@ export class NapicuDate {
   }
 
   /**
-   * Get the hours in 12-hour format
+   * Gets the hours in 12-hour format
    * @param date
    */
   protected getHours12(date: Date): string {
@@ -158,7 +158,7 @@ export class NapicuDate {
   }
 
   /**
-   * Get the minutes
+   * Gets the minutes
    * @param date
    */
   protected getMinutes(date: Date): string {
@@ -166,7 +166,7 @@ export class NapicuDate {
   }
 
   /**
-   * Get the seconds
+   * Gets the seconds
    * @param date
    */
   protected getSeconds(date: Date): string {
@@ -174,7 +174,7 @@ export class NapicuDate {
   }
 
   /**
-   * Get the meridian
+   * Gets the meridian
    * @param date
    */
   protected getMeridian(date: Date): string {
@@ -182,7 +182,7 @@ export class NapicuDate {
   }
 
   /**
-   * Get the timezone
+   * Gets the timezone
    * @param date
    */
   protected getTimezone(date: Date): string {
@@ -190,86 +190,93 @@ export class NapicuDate {
   }
 
   /**
-   * Get the days
+   * Gets the days
    */
   public static getLanguageDays(): string[] {
     return NapicuDateConfig.days;
   }
 
   /**
-   * Get the months
+   * Gets the months
    */
   public static getLanguageMonths(): string[] {
     return NapicuDateConfig.months;
   }
 
   /**
-   * Get the short days
+   * Gets the short days
    */
   public static getLanguageShortsDays(): string[] {
     return NapicuDateConfig.days.map((day: string) => day.slice(0, NapicuDateConfig.shortNameLength));
   }
 
   /**
-   * Get the short months
+   * Gets the short months
    */
   public static getLanguageShortsMonths(): string[] {
     return NapicuDateConfig.months.map((month: string) => month.slice(0, NapicuDateConfig.shortNameLength));
   }
 
   /**
-   * Get the current day
+   * Gets the current day
    */
   public getCurrentDay(): number {
     return this._date.getDay();
   }
 
   /**
-   * Get the current month
+   * Gets the current month
    */
   public getCurrentMonth(): number {
     return this._date.getMonth();
   }
 
   /**
-   * Get the current year
+   * Gets the current year
    */
   public getCurrentYear(): number {
     return this._date.getFullYear();
   }
 
   /**
-   * Get the current seconds
+   * Gets the current seconds
    */
   public getCurrentSeconds(): number {
     return this._date.getSeconds();
   }
 
   /**
-   * Get the current minutes
+   * Gets the current minutes
    */
   public getCurrentMinutes(): number {
     return this._date.getMinutes();
   }
 
   /**
-   * Get the current minutes
+   * Gets the current minutes
    */
   public getCurrentHours(): number {
     return this._date.getHours();
   }
 
   /**
-   * Get the current day name
+   * Gets the current day name
    */
   public getCurrentDayName(): string {
     return NapicuDateConfig.days[this._date.getDay()];
   }
 
   /**
-   * Get the current month name
+   * Gets the current month name
    */
   public getCurrentMonthName(): string {
     return NapicuDateConfig.months[this._date.getMonth()];
+  }
+
+  /**
+   * Gets the time value in milliseconds. 
+   */
+  public getTimeStamp(): number{
+    return this._date.getTime();
   }
 }

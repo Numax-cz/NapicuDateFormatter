@@ -64,11 +64,6 @@
          <td>Returns the current minutes in number</td>
       </tr>
       <tr>
-         <td>Minutes</td>
-         <td>%mm</td>
-         <td>Returns the current minutes</td>
-      </tr>
-      <tr>
          <td>Seconds</td>
          <td>%ss</td>
          <td>Returns the current seconds</td>
@@ -76,7 +71,7 @@
       <tr>
          <td>Meridian</td>
          <td>%a</td>
-    <td>Returns the current meridian</td>
+         <td>Returns the current meridian</td>
       </tr>
       <tr>
          <td>Time zone</td>
@@ -167,6 +162,7 @@ i.getCurrentMinutes(); // Returns the current minutes
 i.getCurrentHours(); // Returns the current hours
 i.getCurrentDayName(); // Returns the current day name in the config language
 i.getCurrentMonthName(); // Returns the current month name in the config language
+i.getTimeStamp(); //Returns the time value in milliseconds
 ```
 
 ### Static methods
