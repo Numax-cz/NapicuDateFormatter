@@ -132,7 +132,7 @@ console.log(i); // Day: Thursday
 ```typescript
 import { NapicuDate } from 'napicuformatter';
 let i = new NapicuDate(2023, 9, 9, 23, 23, 23, 1000).format('%yyyy-%MM-%dd %HH:%mm:%ss');
-console.log(i); //2023-10-24 20:20:20
+console.log(i); //2023-9-9 23:23:24
 ```
 
 ```typescript
