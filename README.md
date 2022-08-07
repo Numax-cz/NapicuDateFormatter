@@ -159,7 +159,8 @@ i.getLanguageDays(); // Returns the days of the week in the config language
 i.getLanguageShortsDays(); // Returns shortened days of the week in the config language
 i.getLanguageMonths(); // Returns  he months of the year in the config language
 i.getLanguageShortsMonths(); // Returns shortened months of the year in the config language
-i.getCurrentDay(); // Returns the current day
+i.getCurrentDay(); // Returns the day of the week, using local time
+i.getCurrentDate(); // Returns the day-of-the-month, using local time
 i.getCurrentMonth(); // Returns the current month
 i.getCurrentYear(); // Returns the current year
 i.getCurrentSeconds(); // Returns the current seconds
