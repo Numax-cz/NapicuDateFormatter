@@ -103,7 +103,7 @@ const NapicuDate = require('napicuformatter');
 ```typescript
 import { NapicuDate } from 'napicuformatter';
 
-let i = new NapicuDate().format('%yyyy-%MM-%dd %HH:%mm:%ss');
+let i = new NapicuDate().format('%yyyy-%MM-%dt %HH:%mm:%ss');
 console.log(i); // 2022-4-12 16:59:30
 ```
 
@@ -131,19 +131,19 @@ console.log(i); // Day: Thursday
 ### Custom Date
 ```typescript
 import { NapicuDate } from 'napicuformatter';
-let i = new NapicuDate(2023, 9, 9, 23, 23, 23, 1000).format('%yyyy-%MM-%dd %HH:%mm:%ss');
+let i = new NapicuDate(2023, 9, 9, 23, 23, 23, 1000).format('%yyyy-%MM-%dt %HH:%mm:%ss');
 console.log(i); //2023-9-9 23:23:24
 ```
 
 ```typescript
 import { NapicuDate } from 'napicuformatter';
-let i = new NapicuDate(1547778643657).format('%yyyy-%MM-%dd %HH:%mm:%ss');
+let i = new NapicuDate(1547778643657).format('%yyyy-%MM-%dt %HH:%mm:%ss');
 console.log(i); //2019-1-18 03:30:43
 ```
 
 ```typescript
 import { NapicuDate } from 'napicuformatter';
-let i = new NapicuDate(2016, 6, 6).format('%yyyy-%MM-%dd %HH:%mm:%ss');
+let i = new NapicuDate(2016, 6, 6).format('%yyyy-%MM-%dt %HH:%mm:%ss');
 console.log(i); //2019-1-18 03:30:43
 ```
 
