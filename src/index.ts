@@ -18,7 +18,7 @@ export class NapicuDate {
   constructor();
   constructor(timestamp: number);
   constructor(year: number, month: number);
-    constructor(yearOrTimestamp: number , month: number, day?: number, hours?: number, minutes?: number, seconds?: number, ms?: number)
+  constructor(yearOrTimestamp: number , month: number, day?: number, hours?: number, minutes?: number, seconds?: number, ms?: number)
   constructor(yearOrTimestamp?: number , month?: number, day?: number, hours?: number, minutes?: number, seconds?: number, ms?: number)
  {
 
@@ -38,6 +38,7 @@ export class NapicuDate {
       '%MN': this.getShortMonthName,
       '%MM': this.getMonth,
       '%dd': this.getDay,
+      '%dt': this.getDate,
       '%HH': this.getHours24,
       '%hh': this.getHours12,
       '%mm': this.getMinutes,
@@ -53,6 +54,7 @@ export class NapicuDate {
    * * %MMN - Month name
    * * %MN - Month name short
    * * %dd - Day
+   * * %dt - Date
    * * %ddn - Day name
    * * %dn - Day name short
    * * %HH - 24 Hour
@@ -90,6 +92,14 @@ export class NapicuDate {
    * @param date
    */
   protected getDay(date: Date): string {
+    return date.getDay().toString();
+  }
+   
+  /**
+   * Gets the date
+   * @param date
+   */
+  protected getDate(date: Date): string {
     return date.getDate().toString();
   }
 
@@ -218,10 +228,17 @@ export class NapicuDate {
   }
 
   /**
-   * Gets the current day
+   * Gets the day of the week, using local time
    */
   public getCurrentDay(): number {
     return this._date.getDay();
+  }
+
+  /**
+ * Gets the day-of-the-month, using local time
+ */
+  public getCurrentDate(): number {
+    return this._date.getDate();
   }
 
   /**

@@ -36,7 +36,12 @@
       <tr>
          <td>Day</td>
          <td>%dd</td>
-         <td>Returns the current day in number</td>
+         <td>Returns the day of the week, using local time</td>
+      </tr>
+      <tr>
+         <td>Date</td>
+         <td>%dt</td>
+         <td>Returns the day-of-the-month, using local time</td>
       </tr>
       <tr>
          <td>Day name</td>
