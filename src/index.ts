@@ -131,7 +131,7 @@ export class NapicuDate {
    * @param date
    */
   protected getDayName(date: Date): string {
-    return NapicuDateConfig.days[date.getDay()];
+    return NapicuDateConfig.days[date.getDay() - 1];
   }
 
   /**
