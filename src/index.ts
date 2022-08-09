@@ -155,7 +155,7 @@ export class NapicuDate {
    * @param date
    */
   protected getHours24(date: Date): string {
-    return date.getHours().toString().padStart(2, '0');
+    return date.getHours().toString()
   }
 
   /**
@@ -164,7 +164,7 @@ export class NapicuDate {
    */
   protected getHours12(date: Date): string {
     let hours = date.getHours();
-    return hours > 12 ? (hours - 12).toString().padStart(2, '0') : hours.toString().padStart(2, '0');
+    return hours > 12 ? (hours - 12).toString() : hours.toString();
   }
 
   /**
