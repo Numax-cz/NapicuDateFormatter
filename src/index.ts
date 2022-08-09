@@ -280,7 +280,7 @@ export class NapicuDate {
    * Gets the current day name
    */
   public getCurrentDayName(): string {
-    return NapicuDateConfig.days[this._date.getDay()];
+    return NapicuDateConfig.days[this._date.getDay() + 1];
   }
 
   /**
