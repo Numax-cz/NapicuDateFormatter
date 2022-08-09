@@ -138,13 +138,13 @@ console.log(i); //2023-9-9 23:23:24
 ```typescript
 import { NapicuDate } from 'napicuformatter';
 let i = new NapicuDate(1547778643657).format('%yyyy-%MM-%dt %HH:%mm:%ss');
-console.log(i); //2019-1-18 03:30:43
+console.log(i); //2019-1-18 3:30:43
 ```
 
 ```typescript
 import { NapicuDate } from 'napicuformatter';
 let i = new NapicuDate(2016, 6, 6).format('%yyyy-%MM-%dt %HH:%mm:%ss');
-console.log(i); //2019-1-18 03:30:43
+console.log(i); //2019-1-18 3:30:43
 ```
 
 
