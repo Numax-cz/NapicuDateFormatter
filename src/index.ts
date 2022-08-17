@@ -116,14 +116,14 @@ export class NapicuDate {
    * @param date
    */
   protected getMonthName(date: Date): string {
-    return NapicuDateConfig.months[date.getMonth()];
+    return NapicuDateConfig.months[date.getMonth() - 1];
   }
 
   /**
    * Gets the month name short
    */
   protected getShortMonthName(date: Date): string {
-    return NapicuDateConfig.months[date.getMonth()].slice(0, NapicuDateConfig.shortNameLength);
+    return NapicuDateConfig.months[date.getMonth() - 1].slice(0, NapicuDateConfig.shortNameLength);
   }
 
   /**
