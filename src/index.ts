@@ -277,6 +277,13 @@ export class NapicuDate {
   }
 
   /**
+   * Gets the current meridian
+   */
+  public getCurrentMeridian(): "PM" | "AM" {
+    return this.getMeridian(this._date);
+  }
+
+  /**
    * Gets the current day name
    */
   public getCurrentDayName(): string {

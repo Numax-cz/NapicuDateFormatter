@@ -168,6 +168,7 @@ i.getCurrentMinutes(); // Returns the current minutes
 i.getCurrentHours(); // Returns the current hours
 i.getCurrentDayName(); // Returns the current day name in the config language
 i.getCurrentMonthName(); // Returns the current month name in the config language
+i.getCurrentMeridian(); // Returns the current meridian (AM/PM)
 i.getTimeStamp(); //Returns the time value in milliseconds
 ```
 
