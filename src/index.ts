@@ -187,7 +187,7 @@ export class NapicuDate {
    * Gets the meridian
    * @param date
    */
-  protected getMeridian(date: Date): string {
+  protected getMeridian(date: Date): "PM" | "AM" {
     return date.getHours() >= 12 ? 'PM' : 'AM';
   }
 
