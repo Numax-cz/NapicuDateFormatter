@@ -25,7 +25,7 @@ export class NapicuDate {
    let date: Date = new Date();
 
    if(yearOrTimestamp) {
-       if(month) date = new Date(yearOrTimestamp, month - 1|| 0, day || 0, hours || 0, minutes|| 0, seconds || 0, ms || 0);
+       if(month) date = new Date(yearOrTimestamp, month || 0, day || 0, hours || 0, minutes|| 0, seconds || 0, ms || 0);
        else date = new Date(yearOrTimestamp);
    }
 
@@ -245,7 +245,7 @@ export class NapicuDate {
    * Gets the current month
    */
   public getCurrentMonth(): number {
-    return this._date.getMonth();
+    return this._date.getMonth() + 1;
   }
 
   /**
@@ -294,7 +294,7 @@ export class NapicuDate {
    * Gets the current month name
    */
   public getCurrentMonthName(): string {
-    return NapicuDateConfig.months[this._date.getMonth()];
+    return NapicuDateConfig.months[this._date.getMonth() + 1];
   }
 
   /**
