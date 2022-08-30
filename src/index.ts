@@ -245,7 +245,7 @@ export class NapicuDate {
    * Gets the current month
    */
   public getCurrentMonth(): number {
-    return this._date.getMonth();
+    return this._date.getMonth() + 1;
   }
 
   /**
