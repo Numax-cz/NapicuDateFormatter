@@ -116,7 +116,7 @@ export class NapicuDate {
    * @param date
    */
   protected getMonthName(date: Date): string {
-    return NapicuDateConfig.months[date.getMonth() - 1];
+    return NapicuDateConfig.months[date.getMonth()];
   }
 
   /**
