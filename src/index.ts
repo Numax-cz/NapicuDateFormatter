@@ -156,7 +156,7 @@ export class NapicuDate {
    * Gets maximum days in month
    */
   protected getMaxDaysInMonth(date: Date): number{
-    return new Date(date.getFullYear(), date.getMonth(), 0).getDate();
+    return new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
   }
 
   /**
@@ -317,6 +317,6 @@ export class NapicuDate {
    * Gets maximum days in current month
    */
   public getMaxDaysInCurrentMonth(): number{
-    return new Date(this._date.getFullYear(), this._date.getMonth(), 0).getDate();
+    return new Date(this._date.getFullYear(), this._date.getMonth() + 1, 0).getDate();
   }
 }
