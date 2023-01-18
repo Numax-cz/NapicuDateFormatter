@@ -37,6 +37,7 @@ export class NapicuDate {
       '%dn': this.getShortDayName,
       '%MN': this.getShortMonthName,
       '%MM': this.getMonth,
+      '%DMAX': this.getMaxDaysInCurrentMonth,
       '%dd': this.getDay,
       '%dt': this.getDate,
       '%HH': this.getHours24,
@@ -57,6 +58,7 @@ export class NapicuDate {
    * * %dt - Date
    * * %ddn - Day name
    * * %dn - Day name short
+   * * %DMAX - Max days in current month
    * * %HH - 24 Hour
    * * %hh - 12 Hour
    * * %mm - Minutes
@@ -302,5 +304,12 @@ export class NapicuDate {
    */
   public getTimeStamp(): number{
     return this._date.getTime();
+  }
+
+  /**
+   * Gets maximum days in current month
+   */
+  public getMaxDaysInCurrentMonth(): number{
+    return new Date(this.getCurrentYear(), this.getCurrentMonth(), 0).getDate();
   }
 }

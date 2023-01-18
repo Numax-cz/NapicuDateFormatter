@@ -39,6 +39,11 @@
          <td>Returns the day of the week, using local time</td>
       </tr>
       <tr>
+         <td>MaxDays</td>
+         <td>%DMAX</td>
+         <td>Returns the maximum number of days in current month</td>
+      </tr>
+      <tr>
          <td>Date</td>
          <td>%dt</td>
          <td>Returns the day-of-the-month, using local time</td>
@@ -83,6 +88,7 @@
          <td>%z</td>
          <td>Returns the time zone</td>
       </tr>
+
    </tbody>
 </table>
 
@@ -161,6 +167,7 @@ i.getLanguageMonths(); // Returns  he months of the year in the config language
 i.getLanguageShortsMonths(); // Returns shortened months of the year in the config language
 i.getCurrentDay(); // Returns the day of the week, using local time
 i.getCurrentDate(); // Returns the day-of-the-month, using local time
+i.getMaxDaysInCurrentMonth(); //Returns the maximum number of days in current month
 i.getCurrentMonth(); // Returns the current month
 i.getCurrentYear(); // Returns the current year
 i.getCurrentSeconds(); // Returns the current seconds
