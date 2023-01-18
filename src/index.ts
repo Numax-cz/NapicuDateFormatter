@@ -37,7 +37,7 @@ export class NapicuDate {
       '%dn': this.getShortDayName,
       '%MN': this.getShortMonthName,
       '%MM': this.getMonth,
-      '%DMAX': this.getMaxDaysInCurrentMonth,
+      '%DMAX': this.getMaxDaysInMonth,
       '%dd': this.getDay,
       '%dt': this.getDate,
       '%HH': this.getHours24,
@@ -150,6 +150,13 @@ export class NapicuDate {
    */
   protected getYear(date: Date): string {
     return date.getFullYear().toString();
+  }
+
+    /**
+   * Gets maximum days in month
+   */
+  protected getMaxDaysInMonth(date: Date): number{
+    return new Date(date.getFullYear(), date.getMonth(), 0).getDate();
   }
 
   /**
