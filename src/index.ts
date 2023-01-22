@@ -317,6 +317,6 @@ export class NapicuDate {
    * Gets maximum days in current month
    */
   public getMaxDaysInCurrentMonth(): number{
-    return new Date(this._date.getFullYear(), this._date.getMonth(), 0).getDate();
+    return new Date(this._date.getFullYear(), this._date.getMonth() + 2, 0).getDate();
   }
 }
